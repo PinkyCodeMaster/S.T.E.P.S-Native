@@ -1,0 +1,104 @@
+---
+title: Feature Inventory (Master List)
+description: Authoritative feature list for S.T.E.P.S with rationale, step alignment, phase, and status.
+---
+
+## 1. Purpose
+
+Single source of truth to prevent scope creep, stop re-litigating decisions, preserve ethical intent, and guide planning. If a feature is not listed, it is not part of S.T.E.P.S.
+
+## 2. How to Read
+
+Each entry includes name, description, why it exists, S.T.E.P.S alignment, phase (MVP, Phase 2, 3, 4, or Parked/Not Planned), and status (Approved, Parked, Rejected).
+
+## 3. Core Platform Features
+
+| Feature | Description | Why | Alignment | Phase | Status |
+| --- | --- | --- | --- | --- | --- |
+| Household setup | Create household unit supporting shared planning. | Money decisions are collective. | Take Control / Protect Family | MVP | Approved |
+| Local-first data storage | Offline-friendly, no mandatory cloud dependency. | Builds trust, privacy, reliability. | Take Control | MVP | Approved |
+
+## 4. Income Features
+
+| Feature | Description | Why | Alignment | Phase | Status |
+| --- | --- | --- | --- | --- | --- |
+| Multiple income sources | Wages, UC, Child Benefit, Maintenance, other with variable amounts. | Real households have complex income. | Take Control | MVP | Approved |
+| UK scheduling rules | Handles last working day wages, four-weekly benefits, weekend/bank holiday shifts. | Prevents missed payments/confusion. | Take Control | MVP | Approved |
+| Universal Credit modelling | Wage taper at 55p per £ above allowance, configurable allowances. | UC households need visibility. | Survive Debt | MVP | Approved |
+| UC housing element handling | Support landlord-paid vs claimant-paid rent, partial coverage, informational-only when landlord-paid. | Prevents false panic/safety. | Survive Debt | MVP | Approved |
+| UC change warnings | Alerts when earnings may affect UC. | Reduce shock and panic. | Take Control | Phase 2 | Approved |
+
+## 5. Expense Features
+
+| Feature | Description | Why | Alignment | Phase | Status |
+| --- | --- | --- | --- | --- | --- |
+| Essential vs discretionary | User-controlled categorisation. | Enables prioritisation clarity. | Survive Debt | MVP | Approved |
+| Rent with UC logic | Fully/partial/not covered states. | Accurate cashflow modelling. | Survive Debt | MVP | Approved |
+| Service charges & ground rent | Separate tracking; never auto-covered. | Prevent hidden shortfalls. | Survive Debt | MVP | Approved |
+| Effective-dated changes | Preserve history when amounts change. | Trust and clarity. | Take Control | MVP | Approved |
+| Rollover budgets | Carry unspent money forward. | Fairness with variable income. | Take Control | Phase 2 | Approved |
+| Sinking funds | Plan for irregular costs. | Reduce “something went wrong” events. | Take Control | Phase 2 | Approved |
+
+## 6. Calendar & Cashflow
+
+| Feature | Description | Why | Alignment | Phase | Status |
+| --- | --- | --- | --- | --- | --- |
+| Calendar-first view | Month + agenda cashflow timeline. | Timing over categories. | Take Control | MVP | Approved |
+| Expected/paid/missed states | Clear status per event. | Visibility without judgment. | Take Control | MVP | Approved |
+| Safe-to-spend | Calculation excluding landlord-paid rent, includes buffer. | Prevent overdraft panic. | Survive Debt | MVP | Approved |
+| Risk-day warnings | Gentle alerts for negative projections. | Encourage early intervention. | Survive Debt | MVP | Approved |
+
+## 7. Debt Features
+
+| Feature | Description | Why | Alignment | Phase | Status |
+| --- | --- | --- | --- | --- | --- |
+| Debt listing & tracking | Balances, minimums, status view. | Centralised clarity. | Survive Debt | MVP | Approved |
+| Debt snowball | Default smallest balance first. | Psychological momentum. | Survive Debt | MVP | Approved |
+| CCJ priority override | Always prioritise CCJs. | Legal risk mitigation. | Survive Debt | MVP | Approved |
+| Alternative strategies | Avalanche or manual ordering options. | User choice once stable. | Establish Wealth | Phase 3 | Approved (Later) |
+
+## 8. Emergency Funds
+
+| Feature | Description | Why | Alignment | Phase | Status |
+| --- | --- | --- | --- | --- | --- |
+| Starter emergency fund | Optional but encouraged. | Immediate safety. | Survive Debt | MVP | Approved |
+| Bare-minimum essentials calc | UC-aware cost baseline. | Realistic safety net. | Take Control | MVP | Approved |
+
+## 9. Recovery & Safety
+
+| Feature | Description | Why | Alignment | Phase | Status |
+| --- | --- | --- | --- | --- | --- |
+| “Something went wrong” entry | Always visible calm call-to-action. | Reduce shame and avoidance. | Survive Debt | MVP | Approved |
+| Recovery flows | Contextual flows (missed payment, letter, unexpected spend, overwhelm). | Real-world recovery support. | Survive Debt | MVP | Approved |
+| Letter upload & storage | Optional vault for letters/photos. | Reduce avoidance, centralise info. | Take Control | MVP | Approved |
+| Phone support prompts | Click-to-call plus scripts. | Empower users before calls. | Take Control | MVP | Approved |
+| Crisis mode | Reduced UI with max three actions. | Prevent cognitive shutdown. | Survive Debt | MVP | Approved |
+
+## 10. Behavioural Support
+
+| Feature | Description | Why | Alignment | Phase | Status |
+| --- | --- | --- | --- | --- | --- |
+| Gentle streaks | Check-ins without penalties. | Encouragement without pressure. | Take Control | Phase 2 | Approved |
+| XP/progress rewards | Cosmetic feedback only. | Motivation without coercion. | Take Control | Phase 2 | Approved |
+
+## 11. Future & Parked
+
+| Feature | Description | Why | Alignment | Phase | Status |
+| --- | --- | --- | --- | --- | --- |
+| Bill date optimisation | Advisory suggestions for bill shifts. | Reduce cashflow pinch. | Take Control | Phase 3 | Parked |
+| Tax & NI estimation | Hourly/salaried estimation. | Forward planning. | Take Control | Phase 3 | Parked |
+| Open banking integration | Optional data connection. | Convenience with consent. | Take Control | Phase 4 | Parked (High Risk) |
+| Ethical debt consolidation | Fixed principal, capped fees, external oversight. | Safe consolidation path. | Establish Wealth | Phase 4 | Parked (Governance) |
+
+## 12. Explicitly Rejected
+
+- Credit score optimisation.
+- Affiliate credit offers.
+- Mandatory bank linking.
+- Payment initiation.
+- Automated enforcement features.
+- Behavioural pressure mechanics.
+
+## 13. Governance Rule
+
+Any new feature must include justification, S.T.E.P.S alignment, ethical review, and phase assignment before it appears here. If it is not in this document, it does not ship.

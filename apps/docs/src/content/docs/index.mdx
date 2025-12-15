@@ -1,0 +1,56 @@
+---
+title: S.T.E.P.S Engineering Handbook
+description: Safety-critical guidance for everyone working on the platform.
+template: splash
+hero:
+  tagline: Calm, resilient engineering for UK households under pressure.
+  actions:
+    - text: Review the onboarding guide
+      link: /guides/getting-started/
+      icon: right-arrow
+    - text: Architecture & governance plan
+      link: /guides/architecture-optimization/
+      variant: minimal
+----
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Why this handbook exists
+
+S.T.E.P.S serves families navigating Universal Credit, fluctuating income, debt, and neurodiversity.
+Every technical decision must preserve calm, uphold the ethical charter, and respect UK financial rules.
+This handbook keeps those obligations visible so no feature, refactor, or release drifts away from the
+governance documents living in `/funadocs`.
+
+## Quick entry points
+
+<CardGrid stagger>
+	<Card title="Team onboarding" icon="pencil" href="/guides/getting-started/">
+		Understand the working agreement, required reading order, and how to request reviews aligned with
+		the Ethical Product Charter.
+	</Card>
+	<Card title="Architecture & governance" icon="setting" href="/guides/architecture-optimization/">
+		See the shared package strategy, resilience pillars, and how Decision Log + Governance Matrix tie every
+		change to specific safeguards.
+	</Card>
+	<Card title="Governance matrix" icon="open-book" href="/reference/governance-matrix/">
+		Trace each `/funadocs` document to concrete engineering and process checks before raising a PR or ADR.
+	</Card>
+	<Card title="Recovery & crisis playbook" icon="document">
+		Follow deterministic flows for “Something went wrong” experiences so recovery always remains calmer than avoidance.
+	</Card>
+	<Card title="Phase gates & feature flags" icon="add-document">
+		Validate that work matches the Phased Roadmap & Evolution Plan and that higher-phase features stay optional.
+	</Card>
+	<Card title="Tooling & Bun workflow" icon="setting">
+		Use `bun install` and workspace-aware scripts for every dependency, lint task, or test to keep the supply chain predictable.
+	</Card>
+</CardGrid>
+
+## Operating principles
+
+- **Choose calm.** Prefer slower delivery over stress-inducing shortcuts.
+- **Make uncertainty explicit.** When data is approximate, say so and link to the UK Financial Reality Rules.
+- **Document before coding.** Capture intent via the Decision Log template referencing the Governance Matrix.
+- **Protect recovery paths.** Any change touching crisis flows requires behavioural safety review and tone validation.
+- **Own the outcome.** If a safeguard is missing, add it instead of deferring responsibility.

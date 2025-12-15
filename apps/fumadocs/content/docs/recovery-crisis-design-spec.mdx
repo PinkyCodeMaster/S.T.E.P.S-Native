@@ -1,0 +1,110 @@
+---
+title: Recovery & Crisis Design Specification
+description: Ensures recovery is calmer, safer, and always easier than avoidance.
+---
+
+Survive Debt · Take Control · Establish Wealth · Protect Family · Secure Legacy
+
+## 1. Purpose
+
+Defines how S.T.E.P.S supports users when something goes wrong. Recovery beats optimisation, engagement, or performance metrics. If a conflict arises, recovery wins.
+
+## 2. Core Principles
+
+1. **No Shame:** Never imply fault or irresponsibility.
+2. **De-escalation First:** Calm before numbers or plans.
+3. **Choice, Not Command:** Offer options, never orders.
+4. **Containment Over Perfection:** Stop the bleed; perfection can wait.
+5. **Recovery Is Progress:** Using recovery tools is a positive action.
+
+## 3. Persistent Recovery Entry Point
+
+- **Label:** “Something went wrong — help me fix it”
+- **Visual:** Always visible, calm blue/green, rounded, never red or hidden.
+- **Behaviour:** Pressing it never reduces streaks, triggers penalties, or escalates enforcement. It must feel safe at any time.
+
+## 4. Initial De-escalation Screen
+
+- **Title:** “It’s okay. We can sort this.”
+- **Body Guidance:** “Money problems happen. You’re not in trouble, and this doesn’t undo your progress. Let’s just deal with the next step together.”
+- **Design:** No numbers, warnings, charts, deadlines. Exactly one primary action: “Okay — what happened?”
+
+## 5. One-Tap Context Selection
+
+Options (emoji optional but consistent):
+
+- ⏰ I missed a payment
+- 📩 I got a letter or message
+- 💸 Something cost more than expected
+- 🧾 A bill might be taken again
+- 😞 I’m overwhelmed and avoiding things
+- ❓ Something else
+
+Rules: no free-text requirement, no forced explanations, no severity ranking. A single tap progresses.
+
+## 6. Context-Specific Flows
+
+### 6.1 Missed Payment
+
+- **Goals:** Reduce panic, prevent knock-on failures, offer realistic actions.
+- **System:** Mark payment as neutral “missed,” recalc projections quietly, suppress cascading alerts.
+- **User Options (max 3):** Contact provider, reschedule, adjust this month’s plan.
+- **Tone:** “Missing one payment does not undo everything.”
+
+### 6.2 Letter or Message
+
+- **Goals:** Reduce fear, encourage engagement, prevent avoidance.
+- **Flow:** Optional letter type selection, optional upload for safekeeping, plain-English reassurance.
+- **Upload:** Optional, storage-first, no auto-interpretation or scary AI summaries.
+
+### 6.3 Unexpected Cost
+
+- **Goals:** Contain impact, prevent guilt, adjust safely.
+- **Flow:** Ask rough amount range, adjust safe-to-spend quietly, highlight affected areas.
+- **Language:** Never say “overspent” or “failure.”
+
+### 6.4 Bill Retake Warning
+
+- **Goals:** Prevent repeat failure, protect funds.
+- **Flow:** Explain likely retry window, suggest keeping funds aside without commanding behaviour.
+- **Copy Example:** “Keeping this money aside will likely prevent another issue.”
+
+### 6.5 Overwhelm / Avoidance
+
+- Immediate transition into Crisis Mode.
+
+## 7. Crisis Mode
+
+- **Purpose:** Support users when cognitive load is too high for normal planning.
+- **Triggers:** User selects overwhelm, repeated recovery usage in short time, or manual activation.
+- **Behaviour:** Hide non-essential UI, remove long-term goals and optimisation prompts, reduce notifications.
+- **Visible Elements (max 3):** What is safe right now, what is urgent (if anything), next gentle step.
+- **Exit:** User-controlled or suggested after calm period—never forced.
+
+## 8. Phone Support Integration
+
+- Offer click-to-call when helpful, never mandatory.
+- Provide editable talking points (e.g., “I’m calling to deal with this early… Is there a way to reschedule or get some help?”).
+- App supports confidence; it never speaks for the user.
+
+## 9. System Behaviour Behind the Scenes
+
+Upon recovery flow usage: pause non-essential notifications, avoid escalating language, recalc safely, preserve dignity, hide risk-score concepts. Safety logic stays invisible.
+
+## 10. Closure & Containment
+
+- **Title:** “Here’s where things stand now”
+- **Summary:** What’s okay, what changed, what to expect next.
+- **Final Action:** “That’s enough for today” to give explicit permission to stop.
+
+## 11. Measurement & Success
+
+Recovery succeeds when users re-engage, panic doesn’t escalate, mistakes don’t compound, and users feel supported. Metrics must never penalise recovery usage, rank compliance, or reward pressure tactics.
+
+## 12. Governance
+
+Any change to recovery/crisis behaviour must reference this spec, justify safety improvements, and undergo extra review. If stress increases, roll back immediately.
+
+## 13. Closing Statement
+
+Life is unpredictable; S.T.E.P.S refuses to punish people for being human. The recovery system asks only: “How can we help you fix this — calmly?”
