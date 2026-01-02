@@ -4,10 +4,16 @@ import pino from "pino";
 
 import env from "@/env";
 
+// Shared pino instance for both HTTP middleware and Better Auth logging
+export const appLogger = pino(
+  {
+    level: env.LOG_LEVEL || "info",
+  },
+  env.NODE_ENV === "production" ? undefined : pretty(),
+);
+
 export function pinoLogger() {
   return logger({
-    pino: pino({
-      level: env.LOG_LEVEL || "info",
-    }, env.NODE_ENV === "production" ? undefined : pretty()),
+    pino: appLogger,
   });
 }

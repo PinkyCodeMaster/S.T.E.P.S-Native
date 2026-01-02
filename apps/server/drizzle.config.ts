@@ -8,5 +8,8 @@ export default defineConfig({
     dialect: 'postgresql',
     dbCredentials: {
         url: env.DATABASE_URL,
+        ssl: env.NODE_ENV === "production"
+            ? { rejectUnauthorized: true }
+            : { rejectUnauthorized: false },
     }
 });

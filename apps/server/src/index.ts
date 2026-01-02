@@ -5,6 +5,10 @@ import { prettyJSON } from 'hono/pretty-json'
 import { serveStatic } from 'hono/bun'
 import { cors } from 'hono/cors'
 import env from './env'
+import { auth } from './lib/auth'
+import { incomeRoutes } from './routes/income'
+
+const allowedOrigins = env.CORS_ORIGINS
 
 const app = new OpenAPIHono().basePath('/api/v1')
 
@@ -13,11 +17,9 @@ app.use('*', pinoLogger())
 app.use('/favicon.ico', serveStatic({ path: './favicon.ico' }))
 // Middleware that reads allowed origins from env
 app.use('*', async (c, next) => {
-  const allowedOrigins = env.CORS_ORIGINS!.split(',').map(o => o.trim())
-
   const corsMiddlewareHandler = cors({
     origin: (origin) => {
-      return allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
+      return origin && allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
     },
     credentials: true,
     allowHeaders: ['Content-Type', 'Authorization'],
@@ -68,11 +70,10 @@ app.get('/scalar', Scalar({
   slug: "my-api"
 }))
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+app.get('/', (c) => { return c.text('Hello Hono!') })
 
-export default {
-  port: 9000,
-  fetch: app.fetch,
-} 
+app.on(["POST", "GET"], "/auth/*", (c) => auth.handler(c.req.raw));
+
+app.route("/", incomeRoutes);
+
+export default { port: 9000, fetch: app.fetch, } 
